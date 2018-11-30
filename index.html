@@ -1,0 +1,58 @@
+<!--
+Copyright 2018 Simone Scardapane. Demo for Codemotion Milano 2018.
+-->
+
+<!doctype html>
+<head>
+</head>
+
+<body>
+
+<h1>Codemotion Milano 2018</h1>
+<h2>Learning the 'max' function with TensorFlow.js</h2>
+
+<hr />
+<div>
+<button id="trainModel">Train Model</button>
+<p id="log"></p>
+<p><strong>Epoch</strong>: <span id="epoch">NA</span></p>
+<p><strong>(Highest) Train accuracy</strong>: <span id="accuracy">0.0 %</span></p>
+</div>
+<div class="plot"></div>
+
+<hr />
+<div>
+<button id="testModel">Test Model</button>
+<p><strong>Test input array</strong>: <span id="testInput" />Train first</p>
+<p><strong>Predicted largest element</strong>: <span id="testOutput" />Train first</p>
+</div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vega@4.3.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc8"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@3.20.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"> </script>
+<script src="ui.js"> </script>
+<script src="index.js"></script>
+
+<style>
+  body {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    margin-top: 50px;
+    margin-left: 50px;
+	font-size: 30px;
+  }
+  #trainModel, #testModel {
+	background-color: #4CAF50;
+	border: none;
+    color: white;
+    padding: 15px 32px;
+	font-size: 30px;
+  }
+  .plots {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+</style>
